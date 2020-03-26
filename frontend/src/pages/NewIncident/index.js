@@ -20,14 +20,12 @@ export default function NewIncident() {
             description, 
             value,
         }
-        console.log(data);
         try{
             await api.post('incidents', data, {
                 headers: {
                     Authorization: ongId,
                 }
             })
-            console.log(1);
 
             history.push('/profile');
         } catch(err){
