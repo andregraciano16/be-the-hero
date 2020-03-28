@@ -11,8 +11,9 @@ module.exports = {
               .limit(5)
               .offset((page - 1) * 5)
               .select(['incidents.*', 'ongs.name', 'ongs.whatsapp', 'ongs.city', 'ongs.uf']);
-        response.header('X-Total-Count', count['count(*)'])
-        return response.json(incidents)
+        response.header('X-Total-Count', count['count(*)']);
+        console.log(incidents);
+        return response.json(incidents);
     },
 
     async create(request, response) {
