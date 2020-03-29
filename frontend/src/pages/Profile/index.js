@@ -12,7 +12,7 @@ export default function Profile() {
   const [incidents, setIncidents] = useState([]);
  const history = useHistory();
   useEffect(() => {
-    api.get('incidents', {
+    api.get('profile', {
       headers: {
         Authorization: ongId,
       }
